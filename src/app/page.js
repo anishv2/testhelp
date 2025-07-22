@@ -6,6 +6,7 @@ import FAQ from "@/components/faq";
 import HeroSection from "@/components/home/hero";
 import { HomeHeader } from "@/components/common/header";
 
+export const dynamic = 'force-dynamic';
 export const metadata = {
   title: "Help Center | Aletheia",
   description: "Help Center | Aletheia",

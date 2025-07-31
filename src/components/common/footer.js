@@ -32,7 +32,7 @@ const Footer = () => {
               className="relative w-[100px] sm:w-[150px] h-[30px] sm:h-[45px] mb-4"
             >
               <Image
-                src="/images/brandlogo.webp"
+                src="/images/brandlogo2.webp"
                 alt="Aletheia"
                 fill
                 sizes="100%"

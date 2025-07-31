@@ -8,7 +8,7 @@ import Icons from "@/components/common/icons";
 import AlertBox from "@/components/common/alert";
 import { cache } from "react";
 
-
+export const dynamic = 'force-dynamic';
 
 export const fetchCachedArticles = cache(async (slug) => {
   const res = await GetArticles(slug);
@@ -16,7 +16,7 @@ export const fetchCachedArticles = cache(async (slug) => {
 });
 
 export async function generateMetadata({ params }) {
-  const slug = params.slug;
+  const slug = (await params).slug;
   const articles = await fetchCachedArticles(slug);
   const category = {
     name: articles[0]?.category?.name,
@@ -44,19 +44,20 @@ const CategorisedArticlesPage = async ({ params }) => {
   return (
     <AppLayout>
       <div className="">
-        <div className="border border-gray-300 mb-4">
+        <div className="border border-gray-300">
           <Container className="px-4">
             <Breadcrumbs />
           </Container>
         </div>
-        <Container className="pb-20 px-4">
+        <Container className="pb-20 pt-10 px-4">
           <h1 className="text-2xl md:text-3xl my-4 leading-tight font-semibold">
             {category?.name}
           </h1>
-          <p className="mb-10 text-xl ms:text-2xl text-gray-400">
+          <p className="text-xl ms:text-2xl text-gray-400">
             {category?.description}
           </p>
-          <Section className="p-0 mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         
+          <Section className="p-0 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles?.map((article, ind) => (
               <Link
                 href={`/articles/${article?.slug}`}

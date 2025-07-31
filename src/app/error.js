@@ -1,4 +1,5 @@
 "use client";
+import UnderMaintenance from "@/components/maintenance";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -12,7 +13,7 @@ export default function Error({ error, reset }) {
     <div className="flex flex-col items-center justify-center gap-y-16 min-h-screen main-bg p-6">
       <div className="relative w-[180px] h-[60px] mb-10">
         <Image
-          src="/images/brandlogo.webp"
+          src="/images/brandlogo2.webp"
           alt="Aletheia"
           fill
           sizes="100%"
@@ -24,14 +25,14 @@ export default function Error({ error, reset }) {
           Something went wrong!
         </h1>
         <button
-          className="text-sm sm:text-lg text-white border border-gray-200 rounded-xl p-4 font-medium cursor-pointer"
+          className="text-sm sm:text-lg text-white border border-gray-200 rounded-xl py-2 px-4 font-medium cursor-pointer"
           onClick={
             // Attempt to recover by trying to re-render the invoices route
             () => reset()
           }
         >
           Try again
-        </button>
+        </button> 
       </div>
     </div>
   );

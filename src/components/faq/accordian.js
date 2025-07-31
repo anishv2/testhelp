@@ -20,7 +20,7 @@ const Accordion = ({ title, content, isLast }) => {
   return (
     <div className="border border-gray-300 rounded-2xl overflow-hidden transition-all duration-300">
       <div
-        className="p-4 flex items-center justify-between gap-x-2 text-white main-bg cursor-pointer"
+        className="p-4 flex items-center justify-between gap-x-2 text-gray-700 bg-gray-300 cursor-pointer"
         onClick={handleToggle}
       >
         <h5 className="text-sm sm:text-base font-medium w-[98%]">{title}</h5>

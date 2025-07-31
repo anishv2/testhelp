@@ -28,7 +28,7 @@ body {
     font-family: var(--font-inter);
   }
   .main-bg {
-    @apply bg-cover bg-center bg-[url('https://aletheia.events/wp-content/uploads/2025/07/Aletheia_Final_New_Gradient_Background.jpg')];
+    @apply bg-cover bg-center bg-[url('https://aletheia.events/wp-content/uploads/2025/07/darkbackground.jpg')];
   }
   .text-secondary {
     @apply text-[var(--secondary-blue)];

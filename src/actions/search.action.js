@@ -1,8 +1,9 @@
+
 import AppConfig from "@/config/app.config";
 
-export async function GetFAQs() {
+export async function GetSearchResults(query) {
   try {
-    return (await fetch(`${AppConfig.baseURL}/api/faqs`, 
+    return (await fetch(`${AppConfig.baseURL}/api/search?query=${query}`, 
       {
         headers: {
           "Authorization": `Bearer ${AppConfig.cmsToken}`,
@@ -10,7 +11,7 @@ export async function GetFAQs() {
       }
     )).json();
   } catch (error) {
-    console.error("Error fetching faqs:", error);
+    console.error("Error while query:", error);
     throw new Error(error);
   }
 }

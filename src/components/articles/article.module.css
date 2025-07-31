@@ -1,0 +1,14 @@
+
+.article {
+  video {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .article {
+    iframe {
+      width: 100%;
+    }
+  }
+}

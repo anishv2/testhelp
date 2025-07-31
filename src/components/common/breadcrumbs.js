@@ -6,7 +6,7 @@ import Container from "./container";
 
 const Breadcrumbs = ({ element }) => {
   const pathname = usePathname();
-  const skipPaths = ["categories", "articles"];
+  const skipPaths = ["categories", "articles", "results"];
   const breadCrumbElement = !element ? { label: "", path: "" } : element;
 
   const generateBreadcrumbs = () => {
@@ -23,7 +23,7 @@ const Breadcrumbs = ({ element }) => {
   const renderedBreadcrumbs = generateBreadcrumbs();
 
   return (
-    <Container>
+    // <Container>
       <nav className="py-6 text-sm" aria-label="Breadcrumb">
         <ol className="flex flex-wrap text-xs sm:text-base">
           {renderedBreadcrumbs.map((breadcrumb, ind) =>
@@ -46,8 +46,8 @@ const Breadcrumbs = ({ element }) => {
                   {breadcrumb.label}
                 </Link>
                 {breadcrumb?.label && (
-                  <span>
-                    <Icons.arrowRight className="size-4" />
+                  <span className="mx-1">
+                    <Icons.arrowRight2 className="size-4" />
                   </span>
                 )}
               </li>
@@ -55,7 +55,7 @@ const Breadcrumbs = ({ element }) => {
           )}
         </ol>
       </nav>
-    </Container>
+    // </Container>
   );
 };
 

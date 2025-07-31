@@ -1,25 +1,25 @@
-"use client";
+// "use client";
 import Image from "next/image";
 import Icons from "./icons";
 import Link from "next/link";
-import MobileSidebarMenu from "./mobile-sidebar";
-import { useState } from "react";
+// import MobileSidebarMenu from "./mobile-sidebar";
+// import { useState } from "react";
 
 const HomeHeader = () => {
-  const [open, setOpen] = useState(false);
-  const toggle = () => setOpen(!open);
+  // const [open, setOpen] = useState(false);
+  // const toggle = () => setOpen(!open);
   return (
     <header className="w-full bg-transparent absolute">
-      <nav className="flex items-center justify-between md:justify-center w-full py-3 px-3 lg:px-6">
-        <div className="block md:hidden order-2" onClick={toggle}>
+      <nav className="flex items-center justify-center w-full py-3 px-3 lg:px-6">
+        {/* <div className="block md:hidden order-2" onClick={toggle}>
           <Icons.hambg className="text-white size-6 sm:size-8" />
-        </div>
+        </div> */}
         <Link
           href="/"
-          className="relative w-[100px] sm:w-[150px] h-[30px] sm:h-[45px]"
+          className="relative w-[100px] sm:w-[140px] h-[30px] sm:h-[45px]"
         >
           <Image
-            src="/images/brandlogo.webp"
+            src="/images/brandlogo2.webp"
             alt="Aletheia"
             fill
             sizes="100%"
@@ -29,26 +29,26 @@ const HomeHeader = () => {
           />
         </Link>
       </nav>
-      <MobileSidebarMenu isOpen={open} setOpen={setOpen} />
+      {/* <MobileSidebarMenu isOpen={open} setOpen={setOpen} /> */}
     </header>
   );
 };
 
 const CommonHeader = () => {
-  const [open, setOpen] = useState(false);
-  const toggle = () => setOpen(!open);
+  // const [open, setOpen] = useState(false);
+  // const toggle = () => setOpen(!open);
   return (
     <header className="w-full main-bg">
-      <nav className="flex items-center justify-between md:justify-center w-full py-3 px-3 lg:px-6">
-        <div className="block md:hidden order-2" onClick={toggle}>
+      <nav className="flex items-center justify-center w-full py-3 px-3 lg:px-6">
+        {/* <div className="block md:hidden order-2" onClick={toggle}>
           <Icons.hambg className="text-white size-6 sm:size-8" />
-        </div>
+        </div> */}
         <Link
           href="/"
-          className="relative w-[100px] sm:w-[150px] h-[30px] sm:h-[45px]"
+          className="relative w-[100px] sm:w-[140px] h-[30px] sm:h-[45px]"
         >
           <Image
-            src="/images/brandlogo.webp"
+            src="/images/brandlogo2.webp"
             alt="Aletheia"
             fill
             sizes="100%"
@@ -58,7 +58,7 @@ const CommonHeader = () => {
           />
         </Link>
       </nav>
-      <MobileSidebarMenu isOpen={open} setOpen={setOpen} />
+      {/* <MobileSidebarMenu isOpen={open} setOpen={setOpen} /> */}
     </header>
   );
 };
